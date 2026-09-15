@@ -1,0 +1,7 @@
+streamlit
+gspread
+oauth2client
+pandas
+PyPDF2
+google-api-python-client
+requests
