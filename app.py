@@ -3,7 +3,8 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 from datetime import datetime, timedelta
-import PyPDF2  
+import PyPDF2 
+import json
 
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
