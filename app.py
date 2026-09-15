@@ -45,7 +45,7 @@ def conectar_google():
     
     try:
         # Intenta leer desde la bóveda segura de la nube
-        creds_dict = st.json.loads(st.secrets["gcp_service_account"])
+        creds_dict = json.loads(st.secrets["gcp_service_account"])
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     except Exception:
         # Si estás en tu computadora local, usa el archivo
