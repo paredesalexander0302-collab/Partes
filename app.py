@@ -2,7 +2,7 @@ import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import PyPDF2 
 import json
 
@@ -77,8 +77,10 @@ try:
         # 1. Crear una columna interna convirtiendo los textos de fecha a un formato que Python entienda
         df['FECHA_INTERNA'] = pd.to_datetime(df['FECHA'], errors='coerce').dt.date
         
-        # 2. Obtener la fecha actual y la de mañana
-        hoy = datetime.now().date()
+        # 2. Obtener la fecha actual y la de mañana (Ajustado a hora Ecuador UTC-5)
+        from datetime import timezone
+        zona_ecuador = timezone(timedelta(hours=-5))
+        hoy = datetime.now(zona_ecuador).date()
         manana = hoy + timedelta(days=1)
         
         # 3. Filtrar la tabla para que solo queden las filas de hoy y mañana
