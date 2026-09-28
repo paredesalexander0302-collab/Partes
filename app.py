@@ -396,15 +396,17 @@ if parte_pdf is not None:
                                 personas_reg,                              # I. Personas_Registradas
                                 vehiculos_reg,                             # J. Vehiculos_Registrados
                                 motos_reg,                                 # K. Motos_Registradas
-                                armas_fuego,                               # L. Armas_Fuego
-                                detenidos_bol,                             # M. Detenidos_Boletas
+                                detenidos_arma_sustancias,                 # L. Armas_Fuego
+                                detenidos_boleta,                          # M. Detenidos_Boletas
                                 detenidos_vif,                             # N. Detenidos_VIF
                                 polarizados,                               # O. Polarizados
-                                vehiculos_ret,                             # P. Vehiculos_Retenidos
-                                armas_blancas,                             # Q. Armas_Blancas
-                                vehiculos_recup,                           # R. Vehiculos_Recuperados
-                                detenidos_del,                             # S. Detenidos_Delitos
-                                clausura_bares,                            # T. Clausura_Bares
+                                vehiculos_investigativos,                  # P. Vehiculos_Retenidos
+                                armas_cortopunzantes,                      # Q. Armas_Blancas
+                                vehiculos_recuperados,                     # R. Vehiculos_Recuperados
+                                detenidos_flagrancia,                             # S. Detenidos_Delitos
+                                clausura_locales,                           # T. Clausura_Bares
+                                arma_fuego,
+                                sustancias,
                                 novedades,                                 # U. Novedades
                                 enlace_pdf                                 # V. Archivo_Parte
                             ]
