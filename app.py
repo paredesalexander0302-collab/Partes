@@ -278,11 +278,11 @@ with col1:
     detenidos_arma_sustancias = st.number_input("Detenidos con arma de fuego o sustancias (60%)", min_value=0, value=0, step=1)
     detenidos_boleta = st.number_input("Detenidos por Boleta de apremio (15%)", min_value=0, value=0, step=1)
     detenidos_vif = st.number_input("Detenido por violencia intrafamiliar (15%)", min_value=0, value=0, step=1)
-    polarizados = st.number_input("Polarizados (10%)", min_value=0, value=0, step=1)
+    polarizados = st.number_input("9 Polarizados (10%)", min_value=0, value=0, step=1)
 
 with col2:
     vehiculos_investigativos = st.number_input("Vehículos / Motos Retenidas Fines Investigativos (15%)", min_value=0, value=0, step=1)
-    armas_cortopunzantes = st.number_input("Armas Corto Punzantes (10%)", min_value=0, value=0, step=1)
+    armas_cortopunzantes = st.number_input("8 Armas Corto Punzantes (10%)", min_value=0, value=0, step=1)
     vehiculos_recuperados = st.number_input("Vehículos / Motos Recuperadas (20%)", min_value=0, value=0, step=1)
     detenidos_flagrancia = st.number_input("Detenidos en Flagrancia (20%)", min_value=0, value=0, step=1)
 
