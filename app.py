@@ -289,7 +289,7 @@ with col2:
 with col3:
     clausura_locales = st.number_input("Clausura y cierre de locales (15%)", min_value=0, value=0, step=1)
     arma_fuego = st.number_input("Arma de fuego (20%)", min_value=0, value=0, step=1)
-    sustancias = st.number_input("Sustancias (10%)", min_value=0, value=0, step=1)
+    sustancias = st.number_input("Sustancias (10%) en gramos 1kg (20%)", min_value=0, value=0, step=1)
     
     # --- 4. NOVEDADES DEL OPERATIVO ---
 st.markdown("---")
