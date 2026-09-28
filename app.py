@@ -135,7 +135,6 @@ st.divider()
 st.header("📝 Registro de Nuevo Operativo")
 
 # --- 1. CLASIFICACIÓN ---
-# --- 1. CLASIFICACIÓN ---
 st.subheader("1. Clasificación")
 col_tipo, col_subtipo = st.columns(2)
 
@@ -271,23 +270,26 @@ with col_reg3:
 st.divider() 
 
 # --- BLOQUE SECUNDARIO (NOVEDADES Y RESULTADOS) ---
-st.write("**Novedades y Retenciones**")
-col_nov1, col_nov2, col_nov3 = st.columns(3)
+st.markdown("### Novedades y Retenciones")
 
-with col_nov1:
-    armas_fuego = st.number_input("Armas de Fuego", min_value=0, step=1)
-    detenidos_bol = st.number_input("Detenidos Boletas", min_value=0, step=1)
-    vehiculos_ret = st.number_input("Vehículos Retenidos", min_value=0, step=1)
+col1, col2, col3 = st.columns(3)
 
-with col_nov2:
-    armas_blancas = st.number_input("Armas Blancas", min_value=0, step=1)
-    detenidos_vif = st.number_input("Detenidos VIF", min_value=0, step=1)
-    vehiculos_recup = st.number_input("Vehículos Recuperados", min_value=0, step=1)
+with col1:
+    detenidos_arma_sustancias = st.number_input("Detenidos con arma de fuego o sustancias (60%)", min_value=0, value=0, step=1)
+    detenidos_boleta = st.number_input("Detenidos por Boleta de apremio (15%)", min_value=0, value=0, step=1)
+    detenidos_vif = st.number_input("Detenido por violencia intrafamiliar (15%)", min_value=0, value=0, step=1)
+    polarizados = st.number_input("Polarizados (10%)", min_value=0, value=0, step=1)
 
-with col_nov3:
-    polarizados = st.number_input("Polarizados", min_value=0, step=1)
-    detenidos_del = st.number_input("Detenidos Delitos", min_value=0, step=1)
-    clausura_bares = st.number_input("Clausura Bares", min_value=0, step=1)
+with col2:
+    vehiculos_investigativos = st.number_input("Vehículos / Motos Retenidas Fines Investigativos (15%)", min_value=0, value=0, step=1)
+    armas_cortopunzantes = st.number_input("Armas Corto Punzantes (10%)", min_value=0, value=0, step=1)
+    vehiculos_recuperados = st.number_input("Vehículos / Motos Recuperadas (20%)", min_value=0, value=0, step=1)
+    detenidos_flagrancia = st.number_input("Detenidos en Flagrancia (20%)", min_value=0, value=0, step=1)
+
+with col3:
+    clausura_locales = st.number_input("Clausura y cierre de locales (15%)", min_value=0, value=0, step=1)
+    arma_fuego = st.number_input("Arma de fuego (20%)", min_value=0, value=0, step=1)
+    sustancias = st.number_input("Sustancias (10%)", min_value=0, value=0, step=1)
     
     # --- 4. NOVEDADES DEL OPERATIVO ---
 st.markdown("---")
