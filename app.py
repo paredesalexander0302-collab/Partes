@@ -384,8 +384,9 @@ if parte_pdf is not None:
                             goms_usados = ", ".join(list(set([str(p.get('UNIDAD', '')) for p in st.session_state.personal_participante if str(p.get('UNIDAD', '')).startswith('GOM')])))
                             
                             # ESTA ES LA ESTRUCTURA EXACTA DE TU EXCEL (De la A a la V)
+                            zona_ecuador = timezone(timedelta(hours=-5))
                             nueva_fila = [
-                                datetime.now().strftime("%d/%m/%Y %H:%M"), # A. Fecha
+                                datetime.now(zona_ecuador).strftime("%d/%m/%Y"), # A. Fecha
                                 companias_usadas,                          # B. Compañías
                                 circuitos_usados,                          # C. Circuitos
                                 goms_usados,                               # D. GOM
